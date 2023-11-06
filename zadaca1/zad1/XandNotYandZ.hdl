@@ -1,0 +1,9 @@
+CHIP XandNotYandZ {
+    IN x, y, z;
+    OUT out;
+
+    PARTS:
+    Not(in=y, out=notY);
+    Not(in=x, out=notX);
+    Or(a=notY, b=notX, out=out);
+}
